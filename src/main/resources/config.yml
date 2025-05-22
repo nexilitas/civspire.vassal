@@ -1,0 +1,28 @@
+groups:
+  default:
+    permissions:
+      - "vassal.place"
+    inherits: []
+    prefix: "&7[Member]"  # optional group chat prefix
+
+  admin:
+    permissions:
+      - "vassal.admin"
+      - "vassal.manage"
+    inherits:
+      - default
+    prefix: "&c[Admin]"
+
+players:
+  "853c80ef-3c37-49fd-aa49-938b674adae6":  # example UUID
+    groups:
+      - default
+
+  "3e270178-4462-446c-8383-5bf923a69530":
+    groups:
+      - admin
+      - default
+
+settings:
+  default-group: default
+  save-interval-ticks: 1200   # e.g., save every 60 seconds (20 ticks = 1 sec)
